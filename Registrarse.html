@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Simulador</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src='js/jquery.js'></script>
+    <script src='js/Registrarse.js'></script>
+    <script src='js/database/usuarios.js'></script>
+    <script src='js/database/publicaciones.js'></script>
+    <script src='js/modelos.js'></script>
+</head>
+
+<body>
+<div class="bg-dark p-2 text-dark bg-opacity-10">
+    <main class="container ">
+        <div id="completarDatos">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="row justify-content-center">
+                    <div class="col-3">
+                        <h2 class="mt-5 mb-4">Registrar usuario</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom01" class="form-label">Ingrese su email</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" required id="ingresarEmail" value="Charly127@gmail.com">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom01" class="form-label">Ingresar contraseña
+                            (debe contener mas de 6 caracteres)</label>
+                        <input type="password" class="form-control" required id="ingresarContraseña" value="123123123">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom01" class="form-label">Confirmar contraseña</label>
+                        <input type="password" class="form-control" required id="reingresarContraseña"
+                            value="123123123">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom01" class="form-label">Ingrese su nombre de Usuario</label>
+                        <input id="nickname" type="text" class="form-control" value="Charly1" required="">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom01" class="form-label">Ingrese su fecha de nacimiento (debes cumplir
+                            con la mayoria de edad)</label>
+                        <input id="fechaDeNacimiento" class="form-control" type="date" value="2003-03-12" required="">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom01" class="form-label">Defina su Sexo</label>
+                        <select class="form-select" id="sexoElegido" aria-label=".form-select-sm example">
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom01" class="form-label">Ingrese un numero de telefono</label>
+                        <input id="numeroDeTelefono" class="form-control" type="number" value="1" required="">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                            <button class="btn btn-primary btn-sm" onclick="guardar_perfil()">
+                                Siguiente
+                            </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </main>
+</div>
+
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

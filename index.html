@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>hola</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <title>Simulador</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src='js/jquery.js'></script>
+    <script src='js/index.js'></script>
+    <script src='js/database/usuarios.js'></script>
+    <script src='js/database/publicaciones.js'></script> 
+    <script src="js/modelos.js"></script>
 </head>
+
 <body>
-    <h1>Hola manola</h1>
+
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">Informacion.</h4>
+                        <p class="text-muted">EyeLog es una red social enfocada en brindarle al usuario la posibilidad
+                            de hacer publicaciones y enviar mensajes de textos a otros usuarios registrados.</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">¿La pagina presenta problemas?</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Contactanos.</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
+                        viewBox="0 0 24 24">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                        <circle cx="12" cy="13" r="4" />
+                    </svg>
+                    <strong>EYELOG</strong>
+                </a>
+                <a href="IniciarSesion.html">
+                    <button class="navbar-toggler float-end" type="button">
+                        <span>Iniciar sesion</span>
+                    </button>
+                </a>
+
+                <div>
+                    <p class="text-white">¿Eres nuevo?</p>
+                    <ul class="list-unstyled">
+                        <li><a href="Registrarse.html" class="text-white">Registrate</a></li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fas fa-ellipsis-v"></i></span>
+                </button>
+            </div>
+        </div>
+    </header>
+<div class="text-aling-center">
+<button onclick="inicializarBd()" class="btn btn-danger col-md-1 offset-1 mt-5">Inicializar</button>
+</div>
+
+    </main>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
