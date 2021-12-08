@@ -15,18 +15,18 @@ function inicializar_base_datos() {
 
     let arrayVacio = [];
 
-    usuariosExistentes.push(usuario01);
-    usuariosExistentes.push(usuario02);
-    usuariosExistentes.push(usuario03);
-    usuariosExistentes.push(usuario04);
-    usuariosExistentes.push(usuario05);
-    usuariosExistentes.push(usuario06);
-    usuariosExistentes.push(usuario07);
-    usuariosExistentes.push(usuario08);
-    usuariosExistentes.push(usuario09);
-    usuariosExistentes.push(usuario10);
-    usuariosExistentes.push(usuario11);
-    usuariosExistentes.push(usuario12);
+    usuariosExistentes.push(usuario01.toLowerCase());
+    usuariosExistentes.push(usuario02.toLowerCase());
+    usuariosExistentes.push(usuario03.toLowerCase());
+    usuariosExistentes.push(usuario04.toLowerCase());
+    usuariosExistentes.push(usuario05.toLowerCase());
+    usuariosExistentes.push(usuario06.toLowerCase());
+    usuariosExistentes.push(usuario07.toLowerCase());
+    usuariosExistentes.push(usuario08.toLowerCase());
+    usuariosExistentes.push(usuario09.toLowerCase());
+    usuariosExistentes.push(usuario10.toLowerCase());
+    usuariosExistentes.push(usuario11.toLowerCase());
+    usuariosExistentes.push(usuario12.toLowerCase());
 
     publicacionesExistentes.push(arrayVacio);
 
