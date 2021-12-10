@@ -1,9 +1,9 @@
-function usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, cantidadSeguidores, biografia, sexo, id, seguidos) {
+function usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, seguidores, biografia, sexo, id, seguidos) {
     this.nombreUsuario = nombreUsuario;
     this.email = email.toLowerCase();
     this.contraseña = hashcode(contraseña);
     this.fechaDeNacimiento = fechaDeNacimiento;
-    this.cantidadSeguidores = cantidadSeguidores;
+    this.seguidores = seguidores;
     this.biografia = biografia;
     this.sexo = sexo;
     this.id = id;

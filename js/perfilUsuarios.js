@@ -1,16 +1,26 @@
 let usuario;
 
-$(document).ready(function(){
-let vars = getUrlVars();
-if(vars.id){
-    // busco al usuario en la base de datos
-   usuario = findUserById(vars.id);
-   let edad = calcularEdad(usuario.fechaDeNacimiento)
-let perfilUsuario = "<button onclick='volver()' class='btn btn-danger btn-md'><div class='row align-items-center'><i class='fas fa-arrow-left'></i></button><h1><i class='fas fa-user-circle'></i>"+ usuario.nombreUsuario + " Seguidores: "+ usuario.cantidadSeguidores+" <button onclick='seguirUsuario("+ usuario.id+")' class='btn btn-bg btn-primary'><i class='fas fa-user-plus'></i></button></h1><p>"+ usuario.biografia+"</p> edad: "+ edad+"</div>"
-   $("#contenedor").append(perfilUsuario)
-}else{
-    alert("no tengo el usuario"); 
-}
+$(document).ready(function () {
+    let vars = getUrlVars();
+    if (vars.id) {
+        debugger
+        // busco al usuario en la base de datos
+        usuario = findUserById(vars.id);
+        let sigoAlUsuario = findIdUsuarioLogeado(usuario);
+        if (sigoAlUsuario !== -1) {
+            let edad = calcularEdad(usuario.fechaDeNacimiento);
+            let perfilUsuario = "<button onclick='volver('muro.html')' class='btn btn-danger btn-md'><div class='row align-items-center'><i class='fas fa-arrow-left'></i></button><h1><i class='fas fa-user-circle'></i>" + usuario.nombreUsuario + " Seguidores: " + usuario.seguidores + " <button onclick='dejarDeSeguir(" + usuario.id + ")' class='btn btn-bg btn-primary'><i class='fas fa-user-check'></i></button></h1><p>" + usuario.biografia + "</p> edad: " + edad + "</div>"
+            $("#contenedor").append(perfilUsuario);
+        }
+        else {
+            let edad = calcularEdad(usuario.fechaDeNacimiento);
+            let perfilUsuario = "<button onclick='volver('muro.html')' class='btn btn-danger btn-md'><div class='row align-items-center'><i class='fas fa-arrow-left'></i></button><h1><i class='fas fa-user-circle'></i>" + usuario.nombreUsuario + " Seguidores: " + usuario.seguidores + " <button onclick='seguirUsuario(" + usuario.id + ")' class='btn btn-bg btn-primary'><i class='fas fa-user-plus'></i></button></h1><p>" + usuario.biografia + "</p> edad: " + edad + "</div>"
+            $("#contenedor").append(perfilUsuario);
+        }
+    } 
+    else {
+        alert("no tengo el usuario");
+    }
 });
 
 function calcularEdad(fecha) {
@@ -21,7 +31,7 @@ function calcularEdad(fecha) {
     return edad
 }
 
-function volver(){
+function volver() {
     event.preventDefault();
     $(location).prop('href', 'muro.html');
 }

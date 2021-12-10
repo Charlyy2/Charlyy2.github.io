@@ -1,17 +1,17 @@
 function inicializar_base_datos() {
     //carga los usuarios al localstorage 
-    let usuario01 = new usuarios("Eduardo_diaz", "Edu87D@gmail.com", "123123123", "20-11-2001", "572", "holaa", "Masculino", "1", [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
-    let usuario02 = new usuarios("MaleMiani42", "MianiM@gmail.com", "123123123", "12-02-2002", "823", "...", "Femenino", "2", [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
-    let usuario03 = new usuarios("SantiH_", "Hugosgo@gmail.com", "hola", "29-08-2002", "250", "Q hay", "Masculino", "3", [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
-    let usuario04 = new usuarios("JuanCRU", "Eskere@gmail.com", "123123123", "28-12-2000", "1203", "Juan Cruz Esmere", "Masculino", "4", [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12]);
-    let usuario05 = new usuarios("CarlosVillaa", "VC@gmail.com", "123123123", "14-10-2002", "951", "siganme", "Masculino", "5", [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]);
-    let usuario06 = new usuarios("RaulAlonzo91", "RAlonzo0@gmail.com", "123123123", "06-01-1987", "145", "infuriated", "Masculino", "6", [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12]);
-    let usuario07 = new usuarios("_MikhaelaM_", "m_morales@gmail.com", "123123123", "01-05-1999", "1232", "good vibes only", "Femenino", "7", [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]);
-    let usuario08 = new usuarios("IVAN-12-", "User2306@gmail.com", "123123123", "19-10-1994", "57", "que es esto", "Masculino", "8", [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12]);
-    let usuario09 = new usuarios("Estefania6Soria", "SS@gmail.com", "123123123", "12-04-2000", "624", "Hate is gasoline", "Femenino", "9", [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12]);
-    let usuario10 = new usuarios("lucasprompt", "1Lukas@gmail.com", "123123123", "17-11-1997", "432", "diseño grafico es mi pasion", "Masculino", "10", [1, 2, 3, 5, 6, 7, 11, 12]);
-    let usuario11 = new usuarios("Ale_RT", "RampieriAlejo@gmail.com", "123123123", "04-09-1994", "670", "Lic. en nutricion", "Masculino", "11", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]);
-    let usuario12 = new usuarios("LaraSilvetti", "Lara_Nassif@gmail.com", "123123123", "07-08-2002", "2100", "Lara Silvetti 7-8-02", "Femenino", "12", [2, 3, 4, 7, 9, 11]);
+    let usuario01 = new usuarios("Eduardo_diaz", "Edu87D@gmail.com", "123123123", "20-11-2001", [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "holaa", "Masculino", "1", [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    let usuario02 = new usuarios("MaleMiani42", "MianiM@gmail.com", "123123123", "12-02-2002", [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "...", "Femenino", "2", [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    let usuario03 = new usuarios("SantiH_", "Hugosgo@gmail.com", "hola", "29-08-2002", [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12], "Q hay", "Masculino", "3", [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    let usuario04 = new usuarios("JuanCRU", "Eskere@gmail.com", "123123123", "28-12-2000", [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12], "Juan Cruz Esmere", "Masculino", "4", [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12]);
+    let usuario05 = new usuarios("CarlosVillaa", "VC@gmail.com", "123123123", "14-10-2002", [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12], "siganme", "Masculino", "5", [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]);
+    let usuario06 = new usuarios("RaulAlonzo91", "RAlonzo0@gmail.com", "123123123", "06-01-1987", [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12], "infuriated", "Masculino", "6", [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12]);
+    let usuario07 = new usuarios("_MikhaelaM_", "m_morales@gmail.com", "123123123", "01-05-1999", [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12], "good vibes only", "Femenino", "7", [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]);
+    let usuario08 = new usuarios("IVAN-12-", "User2306@gmail.com", "123123123", "19-10-1994", [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12], "que es esto", "Masculino", "8", [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12]);
+    let usuario09 = new usuarios("Estefania6Soria", "SS@gmail.com", "123123123", "12-04-2000", [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12], "Hate is gasoline", "Femenino", "9", [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12]);
+    let usuario10 = new usuarios("lucasprompt", "1Lukas@gmail.com", "123123123", "17-11-1997", [1, 2, 3, 5, 6, 7, 11, 12], "diseño grafico es mi pasion", "Masculino", "10", [1, 2, 3, 5, 6, 7, 11, 12]);
+    let usuario11 = new usuarios("Ale_RT", "RampieriAlejo@gmail.com", "123123123", "04-09-1994", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12], "Lic. en nutricion", "Masculino", "11", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]);
+    let usuario12 = new usuarios("LaraSilvetti", "Lara_Nassif@gmail.com", "123123123", "07-08-2002", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Lara Silvetti 7-8-02", "Femenino", "12", [2, 4, 7, 9, 11]);
 
     let arrayVacio = []
 
@@ -61,7 +61,7 @@ function registrarUsuario(nombreUsuario, email, contraseña, fechaDeNacimiento, 
     }
     else {
         let arrayGuardado = JSON.parse(localStorage.getItem("Usuarios"));
-        let usuario = new usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, "0", "", sexoElegido, parseInt(agregarId()), []);
+        let usuario = new usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, [], "", sexoElegido, parseInt(agregarId()), []);
         arrayGuardado.push(usuario);
         localStorage.setItem("Usuarios", JSON.stringify(arrayGuardado));
         localStorage.setItem("loggedUser", JSON.stringify(usuario))
@@ -114,6 +114,14 @@ function filtrarNombre() {
     }
 }
 
+function findIdUsuarioLogeado(usuario){
+    debugger
+    let usuarioLogeado = getUsuarioLogeado()
+    let usuariosQueSigo = usuarioLogeado.seguidos;
+    let idUsuarioAseguir = usuariosQueSigo.findIndex(w => w == usuario.id);
+    return idUsuarioAseguir
+}
+
 function calcularEdad(fecha) {
     fecha = fecha.split("-")
     let ahora = new Date();
@@ -134,12 +142,18 @@ function seguirUsuario(UsuarioId) {
        usuarios[user].seguidos.push(UsuarioId);
        usuariosQueSigo.push(UsuarioId);
        setUsuarioLogeado(usuarioLogeado);
-       usuarioAseguir.cantidadSeguidores = parseInt(usuarioAseguir.cantidadSeguidores) + 1;
+       usuarioAseguir.seguidores = parseInt(usuarioAseguir.seguidores) + 1;
        setUsuarios(usuarios)
     }else{
         alert("ya sigues a este usuario")
     }
 
+}
+
+function volver(paginaAnterior) {
+    debugger
+    event.preventDefault();
+    $(location).prop('href', paginaAnterior);
 }
 
 function buscarPalabras(frase, palabra) {
@@ -164,5 +178,28 @@ function agregarId() {
         usuarioId = (usuarioId + 1)
     }
     return usuarioId;
+}
+
+function cerrarSesion() {
+    if (confirm("estas seguro que desea cerrar sesion?")) {
+        logout();
+        $(location).prop('href', 'index.html');
+    }
+}
+
+function bloquearUsuario(usuarioId) {
+    //bloquea al usuario seleccionado
+    let usuario = findUserByEmail(usuarioId);
+    if (confirm("¿estas seguro que desea bloquear a este usuario?")) {
+        return usuario
+    }
+}
+
+function dejarDeSeguir(usuarioId) {
+    //deja de seguir al usuario seleccionado
+    let usuario = findUserByEmail(usuarioId);
+    if (confirm("¿estas seguro que desea dejar de seguir a este usuario?")) {
+        return usuario
+    }
 }
 
