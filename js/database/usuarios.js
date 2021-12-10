@@ -115,7 +115,6 @@ function filtrarNombre() {
 }
 
 function calcularEdad(fecha) {
-    debugger
     fecha = fecha.split("-")
     let ahora = new Date();
     let fechaDeNacimiento = new Date(fecha[2] + "/" + fecha[1] + "/" + fecha[0]);

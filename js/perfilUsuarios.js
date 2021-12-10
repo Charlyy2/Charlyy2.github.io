@@ -3,7 +3,6 @@ let usuario;
 $(document).ready(function(){
 let vars = getUrlVars();
 if(vars.id){
-    debugger
     // busco al usuario en la base de datos
    usuario = findUserById(vars.id);
    let edad = calcularEdad(usuario.fechaDeNacimiento)
@@ -15,7 +14,6 @@ let perfilUsuario = "<button onclick='volver()' class='btn btn-danger btn-md'><d
 });
 
 function calcularEdad(fecha) {
-    debugger
     fecha = fecha.split("-")
     let ahora = new Date();
     let fechaDeNacimiento = new Date(fecha[2] + "/" + fecha[1] + "/" + fecha[0]);
