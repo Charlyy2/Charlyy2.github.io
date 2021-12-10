@@ -67,7 +67,7 @@ function seguir(usuarioId) {
     let user = usuario.find(w => w.id == usuarioId);
     if (user) {
         user.cantidadSeguidores = parseInt(user.cantidadSeguidores) + 1;
-        setUsuarios()
+        setUsuarios(usuario);
     }
 }
 
