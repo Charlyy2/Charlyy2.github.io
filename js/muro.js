@@ -62,7 +62,6 @@ function publicar() {
 }
 
 function seguir(usuarioId) {
-    debugger
     seguirUsuario(usuarioId)
     let usuario = getUsuarios();
     let user = usuario.find(w => w.id == usuarioId);

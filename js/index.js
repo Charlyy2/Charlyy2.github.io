@@ -20,5 +20,6 @@ function inicializarBd(){
     inicializar_base_datos();
 }
 
+//ksalñdksañlkdsk
 
 

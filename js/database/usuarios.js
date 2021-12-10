@@ -124,7 +124,6 @@ function calcularEdad(fecha) {
 }
 
 function seguirUsuario(UsuarioId) {
-    debugger
     // guarda el ID del usuario al que deseas seguir en tu propiedad "seguidos"
     let usuarioLogeado = getUsuarioLogeado();
     let usuarios = getUsuarios();

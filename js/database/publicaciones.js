@@ -5,7 +5,6 @@ function guardarPublicacionLocal(publicacion) {
 }
 
 function getPublicaciones() {
-    debugger
     let publicaciones = JSON.parse(localStorage.getItem("Publicaciones"));
     return publicaciones
 }
@@ -26,7 +25,6 @@ function publicacionId() {
 }
 
 function getPublicacionesMuro() {
-    debugger
     let usuarioLogeado = getUsuarioLogeado();
     let publicaciones = getPublicaciones();
 
