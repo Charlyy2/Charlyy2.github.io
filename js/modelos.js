@@ -1,8 +1,8 @@
-function usuarios(nombreUsuario, email, contraseña, edad, cantidadSeguidores, biografia, sexo, id, seguidos) {
+function usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, cantidadSeguidores, biografia, sexo, id, seguidos) {
     this.nombreUsuario = nombreUsuario;
-    this.email = email;
-    this.contraseña = contraseña;
-    this.edad = edad;
+    this.email = email.toLowerCase();
+    this.contraseña = hashcode(contraseña);
+    this.fechaDeNacimiento = fechaDeNacimiento;
     this.cantidadSeguidores = cantidadSeguidores;
     this.biografia = biografia;
     this.sexo = sexo;

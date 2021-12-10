@@ -4,9 +4,9 @@ function iniciar_sesion() {
     //busca el email y comprueba si existe, si existe, comprueba su contraseña.
     let contraseña = $("#contraseña")[0].value;
     let email = $("#nickname")[0].value;
-    let user = findUserByEmail(email);
+    let user = findUserByEmail(email.toLowerCase());
     if (user) {
-        if(user.contraseña == contraseña){
+        if(user.contraseña == hashcode(contraseña)){
             setUsuarioLogeado(user);
             $(location).prop('href', 'muro.html');
         }

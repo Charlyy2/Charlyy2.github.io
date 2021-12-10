@@ -31,6 +31,7 @@ function generarPerfil(nombreUsuario, email, edad, sexoElegido, numeroDeTelefono
 
 
 function guardar_perfil() {
+    debugger
     event.preventDefault();
     let emailIngresado = $("#ingresarEmail")[0].value;
     let contraseñaIngresada = $("#ingresarContraseña")[0].value;

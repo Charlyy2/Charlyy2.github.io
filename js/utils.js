@@ -10,3 +10,14 @@ function getUrlVars()
     }
     return vars;
 }
+
+function hashcode(contraseña) {
+    var hash = 0, i, chr;
+    if (contraseña.length === 0) return hash;
+    for (i = 0; i < contraseña.length; i++) {
+      chr   = contraseña.charCodeAt(i);
+      hash  = ((hash << 5) - hash) + chr;
+      hash |= 0; // Convert to 32bit integer
+    }
+    return hash;
+  };

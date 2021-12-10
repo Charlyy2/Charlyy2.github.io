@@ -2,7 +2,7 @@ function inicializar_base_datos() {
     //carga los usuarios al localstorage 
     let usuario01 = new usuarios("Eduardo_diaz", "Edu87D@gmail.com", "123123123", "20-11-2001", "572", "holaa", "Masculino", "1", [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
     let usuario02 = new usuarios("MaleMiani42", "MianiM@gmail.com", "123123123", "12-02-2002", "823", "...", "Femenino", "2", [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
-    let usuario03 = new usuarios("SantiH_", "Hugosgo@gmail.com", "123123123", "29-08-2002", "250", "Q hay", "Masculino", "3", [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    let usuario03 = new usuarios("SantiH_", "Hugosgo@gmail.com", "hola", "29-08-2002", "250", "Q hay", "Masculino", "3", [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
     let usuario04 = new usuarios("JuanCRU", "Eskere@gmail.com", "123123123", "28-12-2000", "1203", "Juan Cruz Esmere", "Masculino", "4", [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12]);
     let usuario05 = new usuarios("CarlosVillaa", "VC@gmail.com", "123123123", "14-10-2002", "951", "siganme", "Masculino", "5", [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]);
     let usuario06 = new usuarios("RaulAlonzo91", "RAlonzo0@gmail.com", "123123123", "06-01-1987", "145", "infuriated", "Masculino", "6", [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12]);
@@ -151,7 +151,7 @@ function buscarPalabras(frase, palabra) {
 
 
 function agregarId() {
-    
+
     //genera el ID procedural
     let usuarioId;
     let arrayGuardado = JSON.parse(localStorage.getItem("Usuarios"));
