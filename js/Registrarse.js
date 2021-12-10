@@ -40,18 +40,23 @@ function guardar_perfil() {
     let fechaDeNacimiento = $("#fechaDeNacimiento")[0].value;
     let sexoElegido = $("#sexoElegido")[0].value;
     let contraseña = $("#ingresarContraseña")[0].value;
+    let edad = calcularEdad(fechaDeNacimiento);
     if (emailIngresado !== "" && contraseñaIngresada !== "" && contraseñaReingresada !== "") {
         if (contraseñaIngresada.length > 6) {
             if (contraseñaIngresada == contraseñaReingresada) {
-                let respuesta = registrarUsuario(nombreUsuario, emailIngresado, contraseña, fechaDeNacimiento, sexoElegido);
-                if (respuesta.loggedUser) {
-                    alert("usuario registrado con exito");
-                    $(location).prop('href', 'muro.html');
+                if (edad >= 18) {
+                    let respuesta = registrarUsuario(nombreUsuario, emailIngresado, contraseña, fechaDeNacimiento, sexoElegido);
+                    if (respuesta.loggedUser) {
+                        alert("usuario registrado con exito");
+                        $(location).prop('href', 'muro.html');
+                    }
+                    else {
+                        alert("Este usuario ya se encuentra registrado");
+                    }
                 }
-                else {
-                    alert("Este usuario ya se encuentra registrado");
+                else{
+                    alert("Debes ser mayor de edad para registrarte")
                 }
-
             }
             else {
                 alert("Las contraseñas no coinciden");

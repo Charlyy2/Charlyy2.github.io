@@ -1,4 +1,3 @@
-
 let usuariosExistentes = [];
 
 let publicacionesExistentes = [];
@@ -14,15 +13,12 @@ let mi_perfil = {
 
 $(document).ready(function () {
     $("#completarDatos").hide();
-    $("#mostrarUsuarios").hide();
 });
 
 
 function inicializarBd(){
     inicializar_base_datos();
 }
-
-
 
 
 
