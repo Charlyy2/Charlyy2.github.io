@@ -151,6 +151,7 @@ function buscarPalabras(frase, palabra) {
 
 
 function agregarId() {
+    
     //genera el ID procedural
     let usuarioId;
     let arrayGuardado = JSON.parse(localStorage.getItem("Usuarios"));
