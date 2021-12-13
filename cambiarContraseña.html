@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Simulador</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src='js/jquery.js'></script>
+    <script src='js/Registrarse.js'></script>
+    <script src='js/database/usuarios.js'></script>
+    <script src='js/database/publicaciones.js'></script>
+    <script src='js/modelos.js'></script>
+    <script src="js/perfil.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/cambiarContraseña.js"></script>
+</head>
+
+<body>
+<div class="bg-dark p-2 text-dark bg-opacity-10">
+    <main class="container ">
+        <div id="confirmarContraseña">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="row justify-content-center">
+                    <div class="col-3">
+                        <h2 class="mt-3 mb-4">Confirmar contraseña</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom01" class="form-label">Ingrese su contraseña actual</label>
+                        <input type="password" class="form-control" required id="contraseñaActual" value="">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                            <button class="btn btn-primary btn-sm" onclick="confirmarContraseña($('#contraseñaActual')[0].value)">
+                                Siguiente
+                            </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="cambiarContraseña">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="row justify-content-center">
+                    <div class="col-3">
+                        <h2 class="mt-3 mb-4">Cambiar contraseña</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom01" class="form-label">Ingrese su nueva contraseña</label>
+                        <input type="password" class="form-control" required id="nuevaContraseña" value="">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom01" class="form-label">Reingrese su nueva contraseña</label>
+                        <input type="password" class="form-control" required id="reingresarNuevaContraseña" value="">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                            <button class="btn btn-primary btn-sm" onclick="GuardarContraseña($('#nuevaContraseña')[0].value, $('#reingresarNuevaContraseña')[0].value )">
+                                Guardar
+                            </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </main>
+</div>
+
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

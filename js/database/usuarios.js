@@ -1,17 +1,17 @@
 function inicializar_base_datos() {
     //carga los usuarios al localstorage 
-    let usuario01 = new usuarios("Eduardo_diaz", "Edu87D@gmail.com", "123123123", "20-11-2001", [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "holaa", "Masculino", 1, [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
-    let usuario02 = new usuarios("MaleMiani42", "MianiM@gmail.com", "123123123", "12-02-2002", [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "...", "Femenino", 2, [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
-    let usuario03 = new usuarios("SantiH_", "Hugosgo@gmail.com", "hola", "29-08-2002", [1, 2, 4, 5, 6, 7, 8, 9, 10, 11], "Q hay", "Masculino", 3, [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
-    let usuario04 = new usuarios("JuanCRU", "Eskere@gmail.com", "123123123", "28-12-2000", [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12], "Juan Cruz Esmere", "Masculino", 4, [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12]);
-    let usuario05 = new usuarios("CarlosVillaa", "VC@gmail.com", "123123123", "14-10-2002", [1, 2, 3, 4, 6, 7, 8, 9, 10, 11], "siganme", "Masculino", 5, [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]);
-    let usuario06 = new usuarios("RaulAlonzo91", "RAlonzo0@gmail.com", "123123123", "06-01-1987", [1, 2, 3, 4, 5, 7, 8, 9, 10, 11], "infuriated", "Masculino", 6, [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12]);
-    let usuario07 = new usuarios("_MikhaelaM_", "m_morales@gmail.com", "123123123", "01-05-1999", [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12], "good vibes only", "Femenino", 7, [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]);
-    let usuario08 = new usuarios("IVAN-12-", "User2306@gmail.com", "123123123", "19-10-1994", [1, 2, 3, 4, 5, 6, 7, 9, 11], "que es esto", "Masculino", 8, [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12]);
-    let usuario09 = new usuarios("Estefania6Soria", "SS@gmail.com", "123123123", "12-04-2000", [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12], "Hate is gasoline", "Femenino", 9, [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12]);
-    let usuario10 = new usuarios("lucasprompt", "1Lukas@gmail.com", "123123123", "17-11-1997", [1, 2, 3, 5, 6, 7, 8, 9, 11], "diseño grafico es mi pasion", "Masculino", 10, [1, 2, 3, 5, 6, 7, 11]);
-    let usuario11 = new usuarios("Ale_RT", "RampieriAlejo@gmail.com", "123123123", "04-09-1994", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Lic. en nutricion", "Masculino", 11, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]);
-    let usuario12 = new usuarios("LaraSilvetti", "Lara_Nassif@gmail.com", "123123123", "07-08-2002", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "Lara Silvetti 7-8-02", "Femenino", 12, [1, 2, 4, 7, 9]);
+    let usuario01 = new usuarios("Eduardo_diaz", "Edu87D@gmail.com", "123123123", "20-11-2001", [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "holaa", "Masculino", 1, [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], []);
+    let usuario02 = new usuarios("MaleMiani42", "MianiM@gmail.com", "123123123", "12-02-2002", [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "...", "Femenino", 2, [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], []);
+    let usuario03 = new usuarios("SantiH_", "Hugosgo@gmail.com", "hola", "29-08-2002", [1, 2, 4, 5, 6, 7, 8, 9, 10, 11], "Q hay", "Masculino", 3, [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12], []);
+    let usuario04 = new usuarios("JuanCRU", "Eskere@gmail.com", "123123123", "28-12-2000", [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12], "Juan Cruz Esmere", "Masculino", 4, [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12], []);
+    let usuario05 = new usuarios("CarlosVillaa", "VC@gmail.com", "123123123", "14-10-2002", [1, 2, 3, 4, 6, 7, 8, 9, 10, 11], "siganme", "Masculino", 5, [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12], []);
+    let usuario06 = new usuarios("RaulAlonzo91", "RAlonzo0@gmail.com", "123123123", "06-01-1987", [1, 2, 3, 4, 5, 7, 8, 9, 10, 11], "infuriated", "Masculino", 6, [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12], []);
+    let usuario07 = new usuarios("_MikhaelaM_", "m_morales@gmail.com", "123123123", "01-05-1999", [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12], "good vibes only", "Femenino", 7, [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12], []);
+    let usuario08 = new usuarios("IVAN-12-", "User2306@gmail.com", "123123123", "19-10-1994", [1, 2, 3, 4, 5, 6, 7, 9, 11], "que es esto", "Masculino", 8, [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12], []);
+    let usuario09 = new usuarios("Estefania6Soria", "SS@gmail.com", "123123123", "12-04-2000", [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12], "Hate is gasoline", "Femenino", 9, [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12], []);
+    let usuario10 = new usuarios("lucasprompt", "1Lukas@gmail.com", "123123123", "17-11-1997", [1, 2, 3, 5, 6, 7, 8, 9, 11], "diseño grafico es mi pasion", "Masculino", 10, [1, 2, 3, 5, 6, 7, 11], []);
+    let usuario11 = new usuarios("Ale_RT", "RampieriAlejo@gmail.com", "123123123", "04-09-1994", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Lic. en nutricion", "Masculino", 11, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12], []);
+    let usuario12 = new usuarios("LaraSilvetti", "Lara_Nassif@gmail.com", "123123123", "07-08-2002", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "Lara Silvetti 7-8-02", "Femenino", 12, [1, 2, 4, 7, 9], []);
 
     let arrayVacio = []
 
@@ -45,15 +45,14 @@ function findUserById(id) {
 
 function findUserByEmail(email) {
     //busca al usuario por Email
-    let usuario = JSON.parse(localStorage.getItem("Usuarios"));
-    let user = usuario.find(w => w.email == email);
+    let usuarios = getUsuarios()
+    let user = usuarios.find(w => w.email == email);
     return user;
     // to do quitar contraseña
 
 
-} 
+}
 function registrarUsuario(nombreUsuario, email, contraseña, fechaDeNacimiento, sexoElegido) {
-    debugger
     //busco en la base de datos para comprobar que no exista
     let usuario = JSON.parse(localStorage.getItem("Usuarios"));
     let user = usuario.find(w => w.email == email);
@@ -61,9 +60,8 @@ function registrarUsuario(nombreUsuario, email, contraseña, fechaDeNacimiento, 
         return { code: 403 };
     }
     else {
-        debugger
         let arrayGuardado = JSON.parse(localStorage.getItem("Usuarios"));
-        let usuario = new usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, [], "", sexoElegido, parseInt(agregarId()), []);
+        let usuario = new usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, [], "", sexoElegido, parseInt(agregarId()), [], []);
         arrayGuardado.push(usuario);
         localStorage.setItem("Usuarios", JSON.stringify(arrayGuardado));
         localStorage.setItem("loggedUser", JSON.stringify(usuario))
@@ -99,7 +97,7 @@ function getUsuarios() {
     }
 }
 
-function setUsuarios(usuariosExistentes){
+function setUsuarios(usuariosExistentes) {
     //guarda el array de usuarios en el Local Storage
     localStorage.setItem("Usuarios", JSON.stringify(usuariosExistentes))
 }
@@ -116,12 +114,18 @@ function filtrarNombre() {
     }
 }
 
-function findIdUsuarioLogeado(usuario){
-    debugger
+function findSeguidosUsuarioLogeado(usuario) {
     let usuarioLogeado = getUsuarioLogeado()
     let usuariosQueSigo = usuarioLogeado.seguidos;
     let idUsuarioAseguir = usuariosQueSigo.findIndex(w => w == usuario.id);
     return idUsuarioAseguir
+}
+
+function findSeguidoresUsuarioLogeado(usuario) {
+    let usuarioLogeado = getUsuarioLogeado()
+    let usuariosSeguidores = usuarioLogeado.seguidores;
+    let idSeguidor = usuariosSeguidores.findIndex(w => w == usuario.id);
+    return idSeguidor
 }
 
 function calcularEdad(fecha) {
@@ -134,32 +138,30 @@ function calcularEdad(fecha) {
 
 function seguirUsuario(UsuarioId) {
     // guarda el ID del usuario al que deseas seguir en tu propiedad "seguidos"
-    debugger
     let usuarioLogeado = getUsuarioLogeado();
     let usuarios = getUsuarios();
     let user = usuarios.findIndex(w => w.id == usuarioLogeado.id);
     let usuariosQueSigo = usuarioLogeado.seguidos;
     let idUsuarioAseguir = usuariosQueSigo.findIndex(w => w == UsuarioId);
     let usuarioAseguir = usuarios.find(w => w.id == UsuarioId)
-    if(idUsuarioAseguir == -1){
-       usuarios[user].seguidos.push(UsuarioId);
-       usuariosQueSigo.push(UsuarioId);
-       setUsuarioLogeado(usuarioLogeado);
-       setUsuarios(usuarios)
-    }else{
+    if (idUsuarioAseguir == -1) {
+        usuarios[user].seguidos.push(UsuarioId);
+        usuariosQueSigo.push(UsuarioId);
+        usuarioAseguir.seguidores.push(usuarios[user].id)
+        setUsuarioLogeado(usuarioLogeado);
+        setUsuarios(usuarios);
+    } else {
         alert("ya sigues a este usuario")
     }
 
 }
 
 function volver() {
-    debugger
     event.preventDefault();
     $(location).prop('href', 'muro.html');
 }
 
 function volverAperfil() {
-    debugger
     event.preventDefault();
     $(location).prop('href', 'perfil.html');
 }
@@ -205,9 +207,79 @@ function bloquearUsuario(usuarioId) {
 
 function dejarDeSeguir(usuarioId) {
     //deja de seguir al usuario seleccionado
-    let usuario = findUserByEmail(usuarioId);
+    let usuario = findUserById(usuarioId);
+    let usuarios = getUsuarios();
+    let usuarioLogeado = getUsuarioLogeado();
+    let indexUsuario = usuarios.findIndex(w => w.id == usuario.id)
+    let indexIdUsuario = usuarioLogeado.seguidos.findIndex(w => w == usuario.id);
+    let indexMiUsuario = usuarios.findIndex(w => w.id == usuarioLogeado.id);
+    let indexIdMiUsuario = usuario.seguidores.findIndex(w => w == usuarioLogeado.id)
     if (confirm("¿estas seguro que desea dejar de seguir a este usuario?")) {
-        return usuario
+        usuarioLogeado.seguidos.splice(indexIdUsuario, 1);
+        usuarios[indexMiUsuario].seguidos.splice(indexIdUsuario, 1);
+        usuarios[indexUsuario].seguidores.splice(indexIdMiUsuario, 1);
+        setUsuarios(usuarios);
+        setUsuarioLogeado(usuarioLogeado);
     }
 }
 
+function editarUsuario() {
+    let usuarioLogeado = getUsuarioLogeado();
+    $("#perfilUsuario").hide();
+    $("#editor").show();
+    $("#inputNickname")[0].value = usuarioLogeado.nombreUsuario
+    $("#inputBiografia")[0].value = usuarioLogeado.biografia
+}
+
+function editar(biografia, nickname) {
+    let usuarioLogeado = getUsuarioLogeado();
+    let usuarios = getUsuarios();
+    let indexUsuarioLogeado = usuarios.findIndex(w => w.id == usuarioLogeado.id);
+    if (confirm("¿esta seguro que desea guardar los cambios?")) {
+        usuarioLogeado.nombreUsuario = nickname;
+        usuarioLogeado.biografia = biografia;
+        usuarios[indexUsuarioLogeado].nombreUsuario = nickname;
+        usuarios[indexUsuarioLogeado].biografia = biografia;
+        setUsuarioLogeado(usuarioLogeado);
+        setUsuarios(usuarios);
+        $("#editor").hide();
+        $("#perfilUsuario").show();
+    }
+}
+
+function confirmarContraseña(contraseña) {
+    event.preventDefault();
+    let usuarioLogeado = getUsuarioLogeado();
+    if (contraseña !== "") {
+        if (hashcode(contraseña) == usuarioLogeado.contraseña) {
+            $("#confirmarContraseña").hide();
+            $("#cambiarContraseña").show();
+            event.preventDefault();
+        } else {
+            alert("contraseña incorrecta")
+        }
+    } else {
+        alert("ingrese una contraseña")
+    }
+}
+
+function GuardarContraseña(contraseña, contraseñaReingresada) {
+    event.preventDefault();
+    let usuarioLogeado = getUsuarioLogeado();
+    let usuarios = getUsuarios();
+    let indexUsuarioLogeado = usuarios.findIndex(w => w.id == usuarioLogeado.id);
+    if (contraseña == contraseñaReingresada) {
+        if (contraseña.length >= 6) {
+            usuarioLogeado.contraseña = hashcode(contraseña);
+            usuarios[indexUsuarioLogeado].contraseña = hashcode(contraseña);
+            setUsuarioLogeado(usuarioLogeado);
+            setUsuarios(usuarios);
+            alert("contraseña guardada con exito!");
+            $(location).prop('href', 'muro.html');
+        } else {
+            alert("su contraseña debe tener mas de 6 caracteres")
+        }
+    } else {
+        alert("las contraseñas no son iguales")
+    }
+}

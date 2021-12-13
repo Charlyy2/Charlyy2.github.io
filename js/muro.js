@@ -21,12 +21,11 @@ $(document).ready(function () {
     let usuarioLogeado = getUsuarioLogeado()
     if (usuarios) {
         for (let i = 0; i < usuarios.length; i++) {
-            let sigoAlUsuario = findIdUsuarioLogeado(usuarios[i]);
+            let sigoAlUsuario = findSeguidosUsuarioLogeado(usuarios[i]);
             if (sigoAlUsuario == -1) {
                 //se muestran los usuarios que no sigo
                 if (usuarioLogeado.nombreUsuario !== usuarios[i].nombreUsuario) {
-                    debugger
-                    let perfiles = "<a href='perfilUsuarios.html?id=" + usuarios[i].id + "'><li class='list-group-item'><div><h4><i class='fas fa-user-circle'></i> " + usuarios[i].nombreUsuario + "    </a>       </h4><p>" + usuarios[i].biografia + "</p></div><div class='d-grid gap-2 d-md-flex justify-content-md-end'><button class='btn btn-sm btn-primary'onclick='seguirUsuario(" + usuarios[i].id + ")'><i class='fas fa-user-plus'></i></button><div class='btn-group' role='group'></li></ul></div></div></li>"
+                    let perfiles = "<a href='perfilUsuarios.html?id=" + usuarios[i].id + "'><li class='list-group-item'><div><h4><i class='fas fa-user-circle'></i> " + usuarios[i].nombreUsuario + "    </a>       </h4><p>" + usuarios[i].biografia + "</p></div><div class='d-grid gap-2 d-md-flex justify-content-md-end'><button class='btn btn-sm btn-primary'onclick='seguirUsuario(" + usuarios[i].id + ")'><i class='fas fa-user-plus'></i></button><button onclick='bloquearUsuario(" + usuarios[i].id + ")' class='btn btn-sm btn-danger'><i class='fas fa-user-slash'></i></button><div class='btn-group' role='group'></li></ul></div></div></li>"
                     $("#mostrarUsuarios").append(perfiles);
                 }
             }

@@ -1,4 +1,4 @@
-function usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, seguidores, biografia, sexo, id, seguidos) {
+function usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, seguidores, biografia, sexo, id, seguidos, bloqueados) {
     this.nombreUsuario = nombreUsuario;
     this.email = email.toLowerCase();
     this.contraseña = hashcode(contraseña);
@@ -8,6 +8,7 @@ function usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, seguidor
     this.sexo = sexo;
     this.id = id;
     this.seguidos = seguidos;
+    this.bloqueados = bloqueados;
 }
 
 function publicacion(id, texto, fecha, nombreUsuario, idUsuario) {
