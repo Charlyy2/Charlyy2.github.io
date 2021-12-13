@@ -24,18 +24,25 @@
     </div>
     <div id="editor">
         <button onclick='volverAperfil()' class='btn btn-danger btn-md'><i class='fas fa-arrow-left'></i></button>
-        <form class="row g-3">
+        <form class="row gy-2 gx-3 align-items-center">
+            <div class="col-auto">
+                <label class="form-label" for="autoSizingInputGroup">Imagen de perfil</label>
+                <div class="input-group">
+                  <div class="input-group-text">url</div>
+                  <input type="text" class="form-control" placeholder="Pega la url de una imagen" id="url">
+                </div>
+              
             <div class="p-s 3">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <label for="inputEmail4" class="form-label">Nombre de Usuario</label>
                     <input type="text" class="form-control" id="inputNickname">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <label for="inputEmail4" class="form-label">Biografia</label>
                     <input type="text" class="form-control" id="inputBiografia">
                 </div>
-                <button onclick="editar($('#inputBiografia')[0].value, $('#inputNickname')[0].value)"
-                    class="btn btn-md btn-success">Guardar</button>
+            </div>
+                <button onclick="editar($('#inputBiografia')[0].value, $('#inputNickname')[0].value, $('#url')[0].value)" class="btn btn-md btn-success">Guardar</button>
             </div>
 
             

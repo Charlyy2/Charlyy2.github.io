@@ -1,4 +1,4 @@
-function usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, seguidores, biografia, sexo, id, seguidos, bloqueados) {
+function usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, seguidores, biografia, sexo, id, seguidos, bloqueados, imagen) {
     this.nombreUsuario = nombreUsuario;
     this.email = email.toLowerCase();
     this.contraseña = hashcode(contraseña);
@@ -9,6 +9,7 @@ function usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, seguidor
     this.id = id;
     this.seguidos = seguidos;
     this.bloqueados = bloqueados;
+    this.imagen = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/1024px-User-avatar.svg.png";
 }
 
 function publicacion(id, texto, fecha, nombreUsuario, idUsuario) {

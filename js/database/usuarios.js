@@ -102,17 +102,6 @@ function setUsuarios(usuariosExistentes) {
     localStorage.setItem("Usuarios", JSON.stringify(usuariosExistentes))
 }
 
-function filtrarNombre() {
-    if (isNaN($("#buscador")[0].value)) {
-        $("#tablaUsuarios").html("");
-        let nombreIngresado = $("#buscador")[0].value;
-        const nuevoArray = usuariosExistentes.filter(usuario => buscarPalabras(usuario.nombreUsuario.toLowerCase(), nombreIngresado.toLowerCase()) != -1);
-        for (let i = 0; i < usuariosExistentes.length; i++) {
-            insertarDiv();
-        }
-        return nuevoArray;
-    }
-}
 
 function findSeguidosUsuarioLogeado(usuario) {
     let usuarioLogeado = getUsuarioLogeado()
@@ -172,6 +161,19 @@ function buscarPalabras(frase, palabra) {
 }
 
 
+function filtrarNombre() {
+    if (isNaN($("#buscador")[0].value)) {
+        $("#tablaUsuarios").html("");
+        let nombreIngresado = $("#buscador")[0].value;
+        const nuevoArray = usuariosExistentes.filter(usuario => buscarPalabras(usuario.nombreUsuario.toLowerCase(), nombreIngresado.toLowerCase()) != -1);
+        for (let i = 0; i < usuariosExistentes.length; i++) {
+            insertarDiv();
+        }
+        return nuevoArray;
+    }
+}
+
+
 
 function agregarId() {
 
@@ -199,9 +201,22 @@ function cerrarSesion() {
 
 function bloquearUsuario(usuarioId) {
     //bloquea al usuario seleccionado
-    let usuario = findUserByEmail(usuarioId);
-    if (confirm("¿estas seguro que desea bloquear a este usuario?")) {
-        return usuario
+    debugger
+    let usuarios = getUsuarios();
+    let usuario = findUserById(usuarioId);
+    let usuarioLogeado = getUsuarioLogeado();
+    let indexUsuario = usuarios.findIndex(w => w.id == usuario.id);
+    let indexUsuarioLogeado = usuarios.findIndex(w => w.id == usuarioLogeado.id);
+    let usuariosBloqueados = usuarioLogeado.bloqueados.findIndex(w => w == usuario.id);
+    if (usuariosBloqueados == -1) {
+        if (confirm("¿estas seguro que desea bloquear a este usuario?")) {
+            usuarios[indexUsuarioLogeado].bloqueados.push(usuario.id);
+            usuarioLogeado.bloqueados.push(usuario.id);
+            setUsuarios(usuarios);
+            setUsuarioLogeado(usuarioLogeado)
+        }
+    } else {
+        alert("este usuario ya esta bloqueado")
     }
 }
 
@@ -231,15 +246,19 @@ function editarUsuario() {
     $("#inputBiografia")[0].value = usuarioLogeado.biografia
 }
 
-function editar(biografia, nickname) {
+function editar(biografia, nickname, imagen) {
+    debugger
+    event.preventDefault();
     let usuarioLogeado = getUsuarioLogeado();
     let usuarios = getUsuarios();
     let indexUsuarioLogeado = usuarios.findIndex(w => w.id == usuarioLogeado.id);
     if (confirm("¿esta seguro que desea guardar los cambios?")) {
         usuarioLogeado.nombreUsuario = nickname;
         usuarioLogeado.biografia = biografia;
+        usuarioLogeado.imagen = imagen;
         usuarios[indexUsuarioLogeado].nombreUsuario = nickname;
         usuarios[indexUsuarioLogeado].biografia = biografia;
+        usuarios[indexUsuarioLogeado].imagen = imagen;
         setUsuarioLogeado(usuarioLogeado);
         setUsuarios(usuarios);
         $("#editor").hide();
