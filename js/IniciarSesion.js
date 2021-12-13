@@ -1,6 +1,6 @@
 function iniciar_sesion() {
     event.preventDefault();
-
+debugger
     //busca el email y comprueba si existe, si existe, comprueba su contraseña.
     let contraseña = $("#contraseña")[0].value;
     let email = $("#nickname")[0].value;
