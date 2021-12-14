@@ -33,6 +33,7 @@ function getPublicacionesMuro() {
     usuariosQueSigo.push(parseInt(usuarioLogeado.id));
 
     let publicacionesFiltradas = publicaciones.filter(p => usuariosQueSigo.includes(p.idUsuario));
+    
 
     return publicacionesFiltradas;
 }

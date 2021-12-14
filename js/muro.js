@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    getPublicacionesMuro()
     let usuarios = getUsuarios();
     let usuarioLogeado = getUsuarioLogeado();
     let publicaciones = getPublicacionesMuro();
@@ -12,9 +11,9 @@ $(document).ready(function () {
             let usuario = usuarios.find(w => w.id == idDeUsuariosConPublicaciones);
             let publicacionesBloqueadas = usuario.bloqueados.findIndex(w => w == usuarioLogeado.id);
             if (publicacionesBloqueadas == -1) {
-                let publicacion = "<div>" + publicaciones[i].nombreUsuario + ":" + publicaciones[i].texto + "<button class='btn btn-sm btn-danger'><i class='fas fa-heart'></i></button></div>";
-                $("#publicaciones").append(publicacion);
-                $("#publicaciones").append(publicaciones);
+                let usuarioPublicacion = usuarios.findIndex()
+                let publicacion = generarPerfilHTML(publicaciones[i].fecha, publicaciones[i].nombreUsuario, publicaciones[i].texto, publicaciones[i].likes, publicaciones[i].fotoPerfil);
+                $("#publicaciones").append(publicacion);;
             }
         }
     }
@@ -48,11 +47,12 @@ $(document).ready(function () {
 
 
 function publicar() {
+    debugger
     let loggedUser = getUsuarioLogeado();
-    let texto = $("#validationTextarea")[0].value;
-    let publicacion_ = new publicacion(publicacionId(), texto, new Date(), loggedUser.nombreUsuario, parseInt(loggedUser.id));
+    let texto = $("#inputPublicaciones")[0].value;
+    let publicacion_ = new publicacion(publicacionId(), texto, new Date(), loggedUser.nombreUsuario, parseInt(loggedUser.id), [], loggedUser.imagen);
     if (texto != "") {
-        let publicacion = "<div>" + loggedUser.nombreUsuario + ":" + texto + "<button class='btn btn-sm btn-danger'><i class='fas fa-heart'></i></button></div>";
+        let publicacion = generarPerfilHTML(new Date(), loggedUser.nombreUsuario, texto, [], loggedUser.imagen);
         $("#publicaciones").append(publicacion);
         guardarPublicacionLocal(publicacion_);
     }

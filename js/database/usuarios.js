@@ -240,8 +240,9 @@ function dejarDeSeguir(usuarioId) {
 
 function editarUsuario() {
     let usuarioLogeado = getUsuarioLogeado();
-    $("#perfilUsuario").hide();
+    $("#contenedor").hide();
     $("#editor").show();
+    $("#url")[0].value = usuarioLogeado.imagen
     $("#inputNickname")[0].value = usuarioLogeado.nombreUsuario
     $("#inputBiografia")[0].value = usuarioLogeado.biografia
 }
@@ -262,7 +263,7 @@ function editar(biografia, nickname, imagen) {
         setUsuarioLogeado(usuarioLogeado);
         setUsuarios(usuarios);
         $("#editor").hide();
-        $("#perfilUsuario").show();
+        $("#contenedor").show();
     }
 }
 

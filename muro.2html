@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Simulador</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <script src='js/jquery.js'></script>
+  <script src='js/muro.js'></script>
+  <script src='js/database/usuarios.js'></script>
+  <script src='js/database/publicaciones.js'></script>
+  <script src='js/modelos.js'></script>
+  <script src='js/index.js'></script>
+  <script src="js/perfil.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/templates.js"></script>
+
+</head>
+
+<body>
+  <div class="bg-dark p-2 text-dark bg-opacity-10">
+    <div class="container">
+      <div class="row justify-content-start">
+        <div id="muro_" class="col">
+          <div id="miperfil">
+
+          </div>
+          <div id="mostrarUsuarios" class="col-md-3">
+            <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+              <a class="navbar-brand" href="#">Usuarios recomendados</a>
+            </nav>
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example"
+              tabindex="0">
+              <ul class="list-group list-group-flush" id="tablaUsuarios">
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="muro" class="col">
+          <div>
+            <div class="mb-3">
+              <h1 for="validationTextarea" class="form-label">Muro</h1>
+              <textarea class="form-control is-invalid" id="inputPublicaciones"
+                placeholder="Escribe lo que desea publicar..." required></textarea>
+              <div class="invalid-feedback">
+                Por favor ingresa un texto o/u imagen que publicar.
+              </div>
+            </div>
+            <button class="btn btn-lg btn-light" onclick="publicar()">Publicar</button>
+          </div>
+          <div id="publicaciones">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

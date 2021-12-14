@@ -12,10 +12,12 @@ function usuarios(nombreUsuario, email, contraseña, fechaDeNacimiento, seguidor
     this.imagen = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/1024px-User-avatar.svg.png";
 }
 
-function publicacion(id, texto, fecha, nombreUsuario, idUsuario) {
+function publicacion(id, texto, fecha, nombreUsuario, idUsuario, likes, fotoPerfil) {
     this.id = id;
     this.texto = texto;
     this.fecha = fecha;
     this.nombreUsuario = nombreUsuario;
     this.idUsuario = idUsuario;
+    this.likes = likes;
+    this.fotoPerfil = fotoPerfil;
 }
