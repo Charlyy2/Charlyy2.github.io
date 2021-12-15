@@ -37,3 +37,8 @@ function getPublicacionesMuro() {
 
     return publicacionesFiltradas;
 }
+
+function likeBtn(){
+    let usuarios = getUsuarios();
+    let
+}

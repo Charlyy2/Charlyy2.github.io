@@ -1,20 +1,27 @@
-let usuario;
+
 
 $(document).ready(function () {
     let vars = getUrlVars();
     if (vars.id) {
+        debugger
         // busco al usuario en la base de datos
-        usuario = findUserById(vars.id);
+        let usuario = findUserById(vars.id);
         let sigoAlUsuario = findSeguidosUsuarioLogeado(usuario);
         if (sigoAlUsuario !== -1) {
             let edad = calcularEdad(usuario.fechaDeNacimiento);
             let perfilUsuario = "<button onclick='volver()' class='btn btn-danger btn-md'><div class='row align-items-center'><i class='fas fa-arrow-left'></i></button><h1><image src="+ usuario.imagen +"  width = '40px'></image>" + usuario.nombreUsuario + " Seguidores: " + usuario.seguidores.length + " Seguidos: " + usuario.seguidos.length + " <button onclick='dejarDeSeguir(" + usuario.id + ")' class='btn btn-bg btn-primary'><i class='fas fa-user-check'></i></button><button onclick='bloquearUsuario(" + usuario.id + ")' class='btn btn-bg btn-danger'><i class='fas fa-user-slash'></i></button></h1><p>" + usuario.biografia + "</p> edad: " + edad + "</div>"
-            $("#contenedor").append(perfilUsuario);
+            $("#perfilUsuario").append(perfilUsuario);
         }
         else {
             let edad = calcularEdad(usuario.fechaDeNacimiento);
             let perfilUsuario = "<button onclick='volver()' class='btn btn-danger btn-md'><div class='row align-items-center'><i class='fas fa-arrow-left'></i></button><h1><image src="+ usuario.imagen +"  width = '40px'></image>" + usuario.nombreUsuario + " Seguidores: " + usuario.seguidores.length + "  Seguidos: " + usuario.seguidos.length + "<button onclick='seguirUsuario(" + usuario.id + ")' class='btn btn-bg btn-primary'><i class='fas fa-user-plus'></i></button><button onclick='bloquearUsuario(" + usuario.id + ")' class='btn btn-bg btn-danger'><i class='fas fa-user-slash'></i></button></h1><p>" + usuario.biografia + "</p> edad: " + edad + "</div>"
-            $("#contenedor").append(perfilUsuario);
+            $("#perfilUsuario").append(perfilUsuario);
+        }
+        let publicaciones = getPublicacionesMuro();
+        let publicacionesUsuario = publicaciones.filter(w => w.idUsuario == usuario.id);
+        for (let i = 0; i < publicacionesUsuario.length; i++) {
+            let publicacion = generarPublicacionHTML(publicacionesUsuario[i].fecha, usuario.nombreUsuario, publicacionesUsuario[i].texto, publicacionesUsuario[i].likes, usuario.imagen);
+            $("#pulicacionesUsuarios").append(publicacion);
         }
     }
     else {

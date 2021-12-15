@@ -1,4 +1,4 @@
-function generarPerfilHTML (fecha, usuario, comentario, likes, fotoPerfil){
+function generarPublicacionHTML (fecha, usuario, comentario, likes, fotoPerfil){
     debugger
   // let HTML = "<div>"+ fotoPerfil + " " + usuario +":" + comentario + "<button class='btn btn-sm btn-danger'><i class='fas fa-heart'></i></button></div>";
   let HTML = `<div class="row">`+
@@ -15,7 +15,7 @@ function generarPerfilHTML (fecha, usuario, comentario, likes, fotoPerfil){
     ``+ comentario +``+
     `</p>`+
     `<p class="lead">`+
-     ` <button class="btn btn-danger btn-sm"><i class='fas fa-heart'></i></button>`+ likes +``+
+     ` <button onclick='likeBtn(`+ usuario.id +`)' class="btn btn-danger btn-sm"><i class='fas fa-heart'></i></button>`+ likes +``+
     `</p>`+
     `<ul class="list-inline">`+
       `<li class="list-inline-item">`+
@@ -29,3 +29,5 @@ function generarPerfilHTML (fecha, usuario, comentario, likes, fotoPerfil){
 `<hr>`;
   return HTML;
 }
+
+function

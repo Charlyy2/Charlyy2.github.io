@@ -11,8 +11,7 @@ $(document).ready(function () {
             let usuario = usuarios.find(w => w.id == idDeUsuariosConPublicaciones);
             let publicacionesBloqueadas = usuario.bloqueados.findIndex(w => w == usuarioLogeado.id);
             if (publicacionesBloqueadas == -1) {
-                let usuarioPublicacion = usuarios.findIndex()
-                let publicacion = generarPerfilHTML(publicaciones[i].fecha, publicaciones[i].nombreUsuario, publicaciones[i].texto, publicaciones[i].likes, publicaciones[i].fotoPerfil);
+                let publicacion = generarPerfilHTML(publicaciones[i].fecha, usuario.nombreUsuario, publicaciones[i].texto, publicaciones[i].likes, usuario.imagen);
                 $("#publicaciones").append(publicacion);;
             }
         }
