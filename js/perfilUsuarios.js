@@ -3,7 +3,6 @@
 $(document).ready(function () {
     let vars = getUrlVars();
     if (vars.id) {
-        debugger
         // busco al usuario en la base de datos
         let usuario = findUserById(vars.id);
         let sigoAlUsuario = findSeguidosUsuarioLogeado(usuario);

@@ -201,7 +201,6 @@ function cerrarSesion() {
 
 function bloquearUsuario(usuarioId) {
     //bloquea al usuario seleccionado
-    debugger
     let usuarios = getUsuarios();
     let usuario = findUserById(usuarioId);
     let usuarioLogeado = getUsuarioLogeado();
@@ -248,7 +247,6 @@ function editarUsuario() {
 }
 
 function editar(biografia, nickname, imagen) {
-    debugger
     event.preventDefault();
     let usuarioLogeado = getUsuarioLogeado();
     let usuarios = getUsuarios();

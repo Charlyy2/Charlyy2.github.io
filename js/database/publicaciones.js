@@ -38,7 +38,17 @@ function getPublicacionesMuro() {
     return publicacionesFiltradas;
 }
 
-function likeBtn(){
-    let usuarios = getUsuarios();
-    let
+function setPublicaciones(publicacionesExistentes) {
+    //guarda el array de usuarios en el Local Storage
+    localStorage.setItem("Publicaciones", JSON.stringify(publicacionesExistentes))
+}
+
+function likeBtn(idUsuario, idPublicacion){
+    let publicaciones = getPublicaciones();
+    let publicacion = publicaciones.find(w => w.id == idPublicacion);
+    let yaDiLike = publicacion.find(w => w.likes == idUsuario)
+    if(!yaDiLike){
+    publicacion.likes.push(idUsuario);
+    setPublicaciones(publicacion);
+    }
 }
