@@ -4,7 +4,6 @@ $(document).ready(function () {
     let idUsuariosSeguidos = usuarioLogeado.seguidos; // [4, 6 , 2 , 7]
 
     if (usuarios) {
-        debugger
         if (idUsuariosSeguidos.length !== 0) {
             for (let i = 0; i < usuarios.length; i++) {
                 let sigoAlUsuario = findSeguidosUsuarioLogeado(usuarios[i]);

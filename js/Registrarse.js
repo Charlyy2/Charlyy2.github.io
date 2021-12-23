@@ -32,6 +32,7 @@ function generarPerfil(nombreUsuario, email, edad, sexoElegido, numeroDeTelefono
 
 function guardar_perfil() {
     event.preventDefault();
+    debugger
     let emailIngresado = $("#ingresarEmail")[0].value;
     let contraseñaIngresada = $("#ingresarContraseña")[0].value;
     let contraseñaReingresada = $("#reingresarContraseña")[0].value;
@@ -44,16 +45,26 @@ function guardar_perfil() {
         if (contraseñaIngresada.length > 6) {
             if (contraseñaIngresada == contraseñaReingresada) {
                 if (edad >= 18) {
+                    debugger
                     let respuesta = registrarUsuario(nombreUsuario, emailIngresado, contraseña, fechaDeNacimiento, sexoElegido);
                     if (respuesta.loggedUser) {
                         alert("usuario registrado con exito");
-                        $(location).prop('href', 'muro.html');
+                        $.ajax({
+                            url: 'datos.php',
+                            type: 'POST',
+                            crossOrigin: null,
+                            data: $("#completarDatos").serialize(),
+                            success: function (res) {
+                                $("#respuesta").html(res);
+                            }
+                        });
+                        $("#completarDatos").hide();
                     }
                     else {
                         alert("Este usuario ya se encuentra registrado");
                     }
                 }
-                else{
+                else {
                     alert("Debes ser mayor de edad para registrarte")
                 }
             }

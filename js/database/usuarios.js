@@ -54,8 +54,9 @@ function findUserByEmail(email) {
 }
 function registrarUsuario(nombreUsuario, email, contraseña, fechaDeNacimiento, sexoElegido) {
     //busco en la base de datos para comprobar que no exista
+    debugger
     let usuario = JSON.parse(localStorage.getItem("Usuarios"));
-    let user = usuario.find(w => w.email == email);
+    let user = usuario.find(w => w.email == email.toLowerCase());
     if (user) {
         return { code: 403 };
     }
@@ -101,6 +102,7 @@ function setUsuarios(usuariosExistentes) {
     //guarda el array de usuarios en el Local Storage
     localStorage.setItem("Usuarios", JSON.stringify(usuariosExistentes))
 }
+
 
 
 function findSeguidosUsuarioLogeado(usuario) {
