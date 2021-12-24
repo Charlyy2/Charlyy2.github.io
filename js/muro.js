@@ -20,7 +20,7 @@ $(document).ready(function () {
     $("#perfil").show();
     let loggedUser = getUsuarioLogeado();
     if (loggedUser) {
-        let perfil = "<div><div class='card'  alt='...'><div class='card-body'><a href='perfil.html'><h1 class='card-title'><image src="+ loggedUser.imagen +"  style='width:50px; height:50px' class='rounded-circle mt-3 mb-3 img-fluid'></image>" + loggedUser.nombreUsuario + "</h1></a><p class='card-text'></p><a href='#' class='btn btn-primary' onclick='cerrarSesion()'>Cerrar Sesion</a></div'</div></div>";
+        let perfil = "<div><div class='card'  alt='...'><div class='card-body'><a href='perfil.html'><h1 class='card-title'><image src=" + loggedUser.imagen + "  style='width:50px; height:50px' class='rounded-circle mt-3 mb-3 img-fluid'></image>" + loggedUser.nombreUsuario + "</h1></a><p class='card-text'></p><a href='#' class='btn btn-primary' onclick='cerrarSesion()'>Cerrar Sesion</a></div'</div></div>";
         $("#miperfil").append(perfil);
     } else {
         $(location).prop('href', 'Registrarse.html');
@@ -33,15 +33,25 @@ $(document).ready(function () {
             if (sigoAlUsuario == -1) {
                 //se muestran los usuarios que no sigo
                 if (usuarioLogeado.nombreUsuario !== usuarios[i].nombreUsuario) {
-                    let perfiles = "<a href='perfilUsuarios.html?id=" + usuarios[i].id + "'><li class='list-group-item'><div><h4><image src="+ usuarios[i].imagen +" style='width:30px; height:30px' class='rounded-circle mt-3 mb-3 img-fluid' ></image>" + " " + usuarios[i].nombreUsuario + "    </a>       </h4><p>" + usuarios[i].biografia + "</p></div><div class='d-grid gap-2 d-md-flex justify-content-md-end'><button class='btn btn-sm btn-primary'onclick='seguirUsuario(" + usuarios[i].id + ")'><i class='fas fa-user-plus'></i></button><button onclick='bloquearUsuario(" + usuarios[i].id + ")' class='btn btn-sm btn-danger'><i class='fas fa-user-slash'></i></button><div class='btn-group' role='group'></li></ul></div></div></li>"
+                    let perfiles = "<a href='perfilUsuarios.html?id=" + usuarios[i].id + "'><li class='list-group-item'><div><h4><image src=" + usuarios[i].imagen + " style='width:30px; height:30px' class='rounded-circle mt-3 mb-3 img-fluid' ></image>" + " " + usuarios[i].nombreUsuario + "    </a>       </h4><p>" + usuarios[i].biografia + "</p></div><div class='d-grid gap-2 d-md-flex justify-content-md-end'><button class='btn btn-sm btn-primary'onclick='seguirUsuario(" + usuarios[i].id + ")'><i class='fas fa-user-plus'></i></button><button onclick='bloquearUsuario(" + usuarios[i].id + ")' class='btn btn-sm btn-danger'><i class='fas fa-user-slash'></i></button><div class='btn-group' role='group'></li></ul></div></div></li>"
                     $("#mostrarUsuarios").append(perfiles);
                 }
             }
         }
     }
+
+    mostrarHora();
 });
 
 
+function mostrarHora() {
+    
+    $.ajax('http://worldtimeapi.org/api/ip').done(function (res) {
+        let date = new Date(res.datetime)
+        let hora = "<h6>"+ date + "</h6>"
+$("#hora").append(hora)
+    });
+}
 
 function publicar() {
     let loggedUser = getUsuarioLogeado();

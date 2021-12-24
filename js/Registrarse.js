@@ -49,16 +49,6 @@ function guardar_perfil() {
                     let respuesta = registrarUsuario(nombreUsuario, emailIngresado, contraseña, fechaDeNacimiento, sexoElegido);
                     if (respuesta.loggedUser) {
                         alert("usuario registrado con exito");
-                        $.ajax({
-                            url: 'datos.php',
-                            type: 'POST',
-                            crossOrigin: null,
-                            data: $("#completarDatos").serialize(),
-                            success: function (res) {
-                                $("#respuesta").html(res);
-                            }
-                        });
-                        $("#completarDatos").hide();
                     }
                     else {
                         alert("Este usuario ya se encuentra registrado");
